@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width">
+ <title>Colegio San Miguel</title>
+ <link href="{{ url_for('static', filename='css/estilos.css') }}" rel="stylesheet">
+ 
+</head>
+<body>
+<header>
+ <h2>Colegio San Miguel</h2>
+</header>
+<section>
+ <nav>
+    <ul>
+    <li><a href="/">Inicio</a></li>
+    <li><a href="#">Opción 1</a></li>
+    <li><a href="#">Opción 2</a></li>
+    </ul>
+ </nav> 
+ <!-- si va a enviar datos al servidor use etiqueta form, si solo va a mostrar datos use la etiqueta article-->
+   <form action = "http://localhost:5000/" method = "post">
+      <label for = "correo">Correo Electrónico</label><br>
+      <input type = "email" name = "correo" placeholder = "Correo" required/><br>
+      <label for = "password">Contraseña</label> <br>
+      <input type = "password" name = "password" placeholder = "Contraseña" required/><br>
+      <label>Elegir Rol</label><br><select id="rol" name="rol">
+         <option value="preceptor">Preceptor</option>
+         <option value="padre">Padre/Madre/Tutor</option>
+      <select><br><br><input type = "submit" value = "Iniciar sesión" />
+   </form>
+
+</section>
+<footer>
+    <p>Dirección y teléfono del colegio</p>
+    <label>Av. Libertador Gral. San Martín 3880, J5400 Rivadavia, San Juan</label><br><label>Teléfono: 4215252</label>
+</footer>
+</body>
+</html>

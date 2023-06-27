@@ -1,0 +1,33 @@
+body{
+    background-color: #808B96;
+}
+
+header {
+    background-color:#5D6D7E;
+    padding: 20px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+   }
+
+h3{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 295px;
+}
+
+footer {
+    background-color:#273746;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    bottom: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,27 @@
+body{
+    background-color: #808B96;
+}
+
+h1{
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+form{
+    background-color: #5f6972;
+    text-align: center;
+}
+
+label{
+    background-color: #5f6972;
+    font-family: Arial, sans-serif;
+}
+
+option{
+    background-color: #5f6972;
+    font-family: Arial, sans-serif;
+}
+
+button{
+    color: #5f6972;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Informe</title>
+    <link href="{{ url_for('static', filename='css/informe.css') }}" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h2>Colegio San Miguel</h2>
+    </header>
+
+    <h1>Informe</h1>
+
+    <form method="POST" action="http://localhost:5000/Informe">
+        <label for="curso">Seleccione un curso:</label>
+        <select name="curso" id="curso">
+            {% for curso in cursos %}
+                <option value="{{ curso.id }}">{{ curso.id }}</option>
+            {% endfor %}
+        </select><br>
+
+        <button type="submit">Generar Listado</button>
+    </form>
+</body>
+<footer>
+    <p>Dirección y teléfono del colegio</p>
+    <label>Av. Libertador Gral. San Martín 3880, J5400 Rivadavia, San Juan</label><br><label>Teléfono: 4215252</label>
+</footer>
+</html>

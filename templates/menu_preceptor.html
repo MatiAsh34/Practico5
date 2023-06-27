@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Menu Preceptor</title>
+    <link href="{{ url_for('static', filename='css/estilos.css') }}" rel="stylesheet">
+</head>
+
+<body>
+<header>
+ <h2>Colegio San Miguel</h2>
+</header>
+<section>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('Registrar_Asistencia') }}">Registrar Asistencia</a></li>
+            <li><a href="{{ url_for('Genera_Informe') }}">Informe con detalles</a></li>
+        </ul>
+    </nav> 
+
+</section>
+<footer>
+    <p>Dirección y teléfono del colegio</p>
+    <label>Av. Libertador Gral. San Martín 3880, J5400 Rivadavia, San Juan</label><br><label>Teléfono: 4215252</label>
+</footer>
+</body>
+</html>

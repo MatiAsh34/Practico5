@@ -1,0 +1,49 @@
+<form method="POST" action="{{ request.path }}">
+    <head>
+      <title>Tabla de asistencia</title>
+      <link href="{{ url_for('static', filename='css/colocar_asistencia.css') }}" rel="stylesheet">
+    </head>
+
+    <header>
+    <h2>Colegio San Miguel</h2>
+    </header>
+<body>
+    <h1>Listado de Alumnos</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Asistencia</th>
+          <th>Justificación</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for alumno in alumnos %}
+        <tr>
+          <td>{{ alumno.id }}</td>
+          <td>{{ alumno.nombre }}</td>
+          <td>{{ alumno.apellido }}</td>
+          <td>
+            <select name="asistio[]">
+              <option value="s">Asistió</option>
+              <option value="n">No Asistió</option>
+            </select>
+          </td>
+          <td>
+            <input type="text" name="justificacion[]">
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <div class="container">
+    <button type="submit">Guardar asistencia</button>
+    </div>
+</form>
+</body>
+  <footer>
+    <p>Dirección y teléfono del colegio</p>
+    <label>Av. Libertador Gral. San Martín 3880, J5400 Rivadavia, San Juan</label><br><label>Teléfono: 4215252</label>
+  </footer>

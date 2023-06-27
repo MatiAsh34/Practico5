@@ -1,0 +1,36 @@
+<head>
+  <link href="{{ url_for('static', filename='css/estilosAsistencia_Tabla.css') }}" rel="stylesheet">
+</head>
+<header>
+  <h2>Colegio San Miguel</h2>
+</header>
+<body>
+  <table>
+    <tr>
+      <th>Nombre del Alumno</th>
+      <th>Clases de Aula Presente</th>
+      <th>Clases de Aula Ausente Justificadas</th>
+      <th>Clases de Aula Ausente Injustificadas</th>
+      <th>Clases de Educación Física Presente</th>
+      <th>Clases de Educación Física Ausente Justificadas</th>
+      <th>Clases de Educación Física Ausente Injustificadas</th>
+      <th>Total de Inasistencias</th>
+    </tr>
+    {% for informe_alumno in informe %}
+      <tr>
+        <td>{{ informe_alumno.alumno.nombre }}</td>
+        <td>{{ informe_alumno.clases_aula_presente }}</td>
+        <td>{{ informe_alumno.clases_aula_ausente_justificadas }}</td>
+        <td>{{ informe_alumno.clases_aula_ausente_injustificadas }}</td>
+        <td>{{ informe_alumno.clases_educacion_fisica_presente }}</td>
+        <td>{{ informe_alumno.clases_educacion_fisica_ausente_justificadas }}</td>
+        <td>{{ informe_alumno.clases_educacion_fisica_ausente_injustificadas }}</td>
+        <td>{{ informe_alumno.total_inasistencias }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+</body>
+<footer>
+  <p>Dirección y teléfono del colegio</p>
+  <label>Av. Libertador Gral. San Martín 3880, J5400 Rivadavia, San Juan</label><br><label>Teléfono: 4215252</label>
+</footer>

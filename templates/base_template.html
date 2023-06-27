@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<header>
+    <meta charset="UTF-8">
+    <link href="{{ url_for('static', filename='css/estilos_template.css') }}" rel="stylesheet">
+    <title>{% block title %}{% endblock %}</title>
+    
+</header>
+<body>
+    {% block content %}{% endblock %}
+      <div class="myDiv">
+			<br><br><a href = "{{ url_for('inicio') }}" class="button"> Inicio </a><br><br>
+	  </div>	
+</body>
+</html>
